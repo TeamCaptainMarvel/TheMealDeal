@@ -1,0 +1,33 @@
+﻿<Page
+    x:Class="testApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:testApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="#FF402C20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="Auto" MinWidth="179"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="0" Grid.ColumnSpan="2" Margin="0,0,0,628" Grid.RowSpan="2">
+            <AppBar>
+                <AppBarSeparator HorizontalAlignment="Left" Margin="0,12,-104,0" VerticalAlignment="Top"/>
+            </AppBar>
+        </StackPanel>
+        <StackPanel x:Name="TitleWrapper" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="0,70.5,0,473" Width="360">
+            <TextBlock Text="THE MEAL DEAL" HorizontalAlignment="Center" SelectionHighlightColor="#000078D7" Foreground="White" FontSize="32" Height="52" Margin="56,0"/>
+        </StackPanel>
+        <Button x:Name="SearchButton" Background="#FFFF7466" Content="Search" HorizontalAlignment="Left" Margin="0,181.833,0,0" Grid.Row="1" VerticalAlignment="Top" Width="179" Height="179" BorderBrush="{x:Null}" Foreground="White" FontSize="16"/>
+        <Button x:Name="button1" Content="Button" HorizontalAlignment="Left" Margin="0,365.833,0,0" Grid.Row="1" VerticalAlignment="Top" Width="179" Height="179" Background="#FFA1EBDE" Foreground="White" Click="button1_Click" FontSize="16"/>
+        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="0,365.833,0,0" Grid.Row="1" VerticalAlignment="Top" Height="179" Width="179" Background="#FFF9D48C" Foreground="White" Grid.Column="1"/>
+    </Grid>
+</Page>
