@@ -43,12 +43,12 @@
                 <Image MaxHeight="50" Source="Assets/browse.png"/>
             </RelativePanel>
         </Button>
-        <Button Name="FavButotn" Style="{StaticResource ButtonTextStyle}" Grid.Column="0" Grid.Row="3" Background="#F47121">
+        <Button Name="FavButotn" Click="FavButotn_Click" Style="{StaticResource ButtonTextStyle}" Grid.Column="0" Grid.Row="3" Background="#F47121">
             <RelativePanel>
                 <Image MaxHeight="50" Source="Assets/favourites.png"/>
             </RelativePanel>
         </Button>
-        <Button Name="AddButton" Style="{StaticResource ButtonTextStyle}" Grid.Column="1" Grid.Row="3" Background="#FFFBAD17">
+        <Button Name="AddButton" Click="AddButton_Click" Style="{StaticResource ButtonTextStyle}" Grid.Column="1" Grid.Row="3" Background="#FFFBAD17">
             <RelativePanel>
                 <Image MaxHeight="50" Source="Assets/add.png"/>
             </RelativePanel>

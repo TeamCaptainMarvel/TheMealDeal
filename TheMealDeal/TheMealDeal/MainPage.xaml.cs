@@ -43,5 +43,15 @@ namespace TheMealDeal
         {
 
         }
+
+        private void FavButotn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void AddButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(AddRecipePage));
+        }
     }
 }
