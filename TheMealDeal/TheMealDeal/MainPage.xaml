@@ -5,11 +5,19 @@
     xmlns:local="using:testApp"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:styles ="using:TheMealDeal.Styles"
     mc:Ignorable="d">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/StylesDictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
 
     <Grid Background="White">
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
@@ -20,27 +28,11 @@
         </Grid.ColumnDefinitions>
 
         <StackPanel x:Name="TitleWrapper" Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock Text="THE MEAL DEAL" HorizontalAlignment="Center" SelectionHighlightColor="#000078D7" Foreground="#FFC94727" FontSize="32" FontWeight="Bold"/>
+            <TextBlock Text="THE MEAL DEAL" HorizontalAlignment="Center" SelectionHighlightColor="#000078D7" Foreground="#FFC94727" FontSize="32" FontFamily="Verdana" FontWeight="Bold"/>
         </StackPanel>
-        <StackPanel Grid.Column="0" Grid.Row="1" Background="#FFFBAD17">
-            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-                <Button Content="Search" Foreground="White" Background="{x:Null}" FontSize="22" FontFamily="Verdana" BorderThickness="0" Padding="0"/>
-            </StackPanel>
-        </StackPanel>
-
-        <StackPanel Grid.Column="1" Grid.Row="1" Background="#FFC94727">
-            <Button Content="F" VerticalAlignment="Center" HorizontalAlignment="Center">
-                
-            </Button>
-
-        </StackPanel>
-
-        <StackPanel Grid.Column="0" Grid.Row="2" Background="#FECF63">
-            
-        </StackPanel>
-
-        <StackPanel Background="#F47121" Grid.Column="1" Grid.Row="2">
-            
-        </StackPanel>
+        <Button Content="Search" Style="{StaticResource ButtonTextStyle}" Grid.Column="0" Grid.Row="1" Background="#FECF63"/>
+        <Button Content="Browse" Style="{StaticResource ButtonTextStyle}" Grid.Column="1" Grid.Row="1" Background="#FFC94727"/>
+        <Button Content="Log In" Style="{StaticResource ButtonTextStyle}" Grid.Column="0" Grid.Row="2" Background="#F47121"/>
+        <Button Content="F" Style="{StaticResource ButtonTextStyle}" Background="#FFFBAD17" Grid.Column="1" Grid.Row="2"/>
     </Grid>
 </Page>
