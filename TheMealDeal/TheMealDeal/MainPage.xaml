@@ -27,28 +27,28 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <RelativePanel x:Name="TitleWrapper" Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <RelativePanel x:Name="LogoWrapper" Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Image Source="Assets/Wide310x150Logo.scale-200.png"/>
         </RelativePanel>
-        <RelativePanel Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center">
+        <RelativePanel x:Name="TitleWrapper" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center">
             <TextBlock Text="The Meal Deal" HorizontalAlignment="Center" SelectionHighlightColor="#000078D7" Foreground="#FFC94727" FontSize="40" FontFamily="Verdana"/>
         </RelativePanel>
-        <Button Style="{StaticResource ButtonTextStyle}" Grid.Column="0" Grid.Row="2" Background="#FECF63">
+        <Button Name="SearchButton" Click="SearchButton_Click" Style="{StaticResource ButtonTextStyle}" Grid.Column="0" Grid.Row="2" Background="#FECF63">
             <RelativePanel>
                 <Image MaxHeight="50" Source="Assets/search.png"/>
             </RelativePanel>
         </Button>
-        <Button Style="{StaticResource ButtonTextStyle}" Grid.Column="1" Grid.Row="2" Background="#FFC94727">
+        <Button Name="BrowseButton" Click="BrowseButton_Click" Style="{StaticResource ButtonTextStyle}" Grid.Column="1" Grid.Row="2" Background="#FFC94727">
             <RelativePanel>
                 <Image MaxHeight="50" Source="Assets/browse.png"/>
             </RelativePanel>
         </Button>
-        <Button Style="{StaticResource ButtonTextStyle}" Grid.Column="0" Grid.Row="3" Background="#F47121">
+        <Button Name="FavButotn" Style="{StaticResource ButtonTextStyle}" Grid.Column="0" Grid.Row="3" Background="#F47121">
             <RelativePanel>
                 <Image MaxHeight="50" Source="Assets/favourites.png"/>
             </RelativePanel>
         </Button>
-        <Button Style="{StaticResource ButtonTextStyle}" Grid.Column="1" Grid.Row="3" Background="#FFFBAD17">
+        <Button Name="AddButton" Style="{StaticResource ButtonTextStyle}" Grid.Column="1" Grid.Row="3" Background="#FFFBAD17">
             <RelativePanel>
                 <Image MaxHeight="50" Source="Assets/add.png"/>
             </RelativePanel>
