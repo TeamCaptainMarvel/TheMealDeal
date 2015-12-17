@@ -19,8 +19,8 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="0.5*"/>
         </Grid.RowDefinitions>
 
         <RelativePanel Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -34,16 +34,29 @@
             </TextBlock>
         </RelativePanel>
 
-        <RelativePanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBox Name="ingredients" MinWidth="200" MaxWidth="500"></TextBox>
+        <RelativePanel Name="relativeIngredientsWrapper" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBox Name="ingredients" MinWidth="200" MaxWidth="500"
+                     RelativePanel.AlignHorizontalCenterWithPanel="True"></TextBox>
             <TextBlock 
+                Name="helper"
                 RelativePanel.Below="ingredients"
                 RelativePanel.AlignHorizontalCenterWith="ingredients"
                 Text="(separate them with commas)"
                 FontFamily="Verdana"
                 FontSize="10"
                 Foreground="#FFC94727"></TextBlock>
+            <RelativePanel 
+                RelativePanel.Below="helper" 
+                RelativePanel.AlignHorizontalCenterWithPanel="True"
+                Margin="0,20,0,0">
+                <TextBlock Name="addedIngredients" Text="Here we visualize the added ingredients like tags... somehow..."></TextBlock>
+            </RelativePanel>
         </RelativePanel>
+        <Button Grid.Row="2" Style="{StaticResource ButtonTextStyle}" Background="#FECF63">
+            <RelativePanel>
+                <Image MaxHeight="50" Source="/Assets/search.png"/>
+            </RelativePanel>
+        </Button>
            
     </Grid>
 </Page>
