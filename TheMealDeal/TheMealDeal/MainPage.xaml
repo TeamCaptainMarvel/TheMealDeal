@@ -31,7 +31,7 @@
             <Image Source="Assets/Wide310x150Logo.scale-200.png"/>
         </RelativePanel>
         <RelativePanel x:Name="TitleWrapper" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center">
-            <TextBlock Text="The Meal Deal" HorizontalAlignment="Center" SelectionHighlightColor="#000078D7" Foreground="#FFC94727" FontSize="40" FontFamily="Verdana"/>
+            <TextBlock Text="The Meal Deal" HorizontalAlignment="Center" SelectionHighlightColor="#000078D7" Foreground="#FFC94727" FontSize="40" FontFamily="Verdana" SelectionChanged="TextBlock_SelectionChanged" Height="49" Margin="0,0,0,-0.333" VerticalAlignment="Top"/>
         </RelativePanel>
         <Button Name="SearchButton" Click="SearchButton_Click" Style="{StaticResource ButtonTextStyle}" Grid.Column="0" Grid.Row="2" Background="#FECF63">
             <RelativePanel>

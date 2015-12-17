@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using TheMealDeal.Pages;
 using TheMealDeal.ViewModels;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -41,7 +42,7 @@ namespace TheMealDeal
 
         private void SearchButton_Click(object sender, RoutedEventArgs e)
         {
-
+            Frame.Navigate(typeof(SearchByIngredientsPage));
         }
 
         private void FavButotn_Click(object sender, RoutedEventArgs e)
@@ -52,6 +53,11 @@ namespace TheMealDeal
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(AddRecipePage));
+        }
+
+        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
