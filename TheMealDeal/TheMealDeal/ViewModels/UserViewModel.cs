@@ -3,8 +3,8 @@
     public class UserViewModel : BaseViewModel
     {
         private string username;
-        private string password;
-        private string imgUrl;
+        private string imageUrl;
+
 
         public string Username
         {
@@ -13,6 +13,16 @@
             {
                 this.username = value;
                 this.OnPropertyChanged("Username");
+            }
+        }
+
+        public string ImageUrl
+        {
+            get { return this.imageUrl; }
+            set
+            {
+                this.username = value;
+                this.OnPropertyChanged("ImageUrl");
             }
         }
 
