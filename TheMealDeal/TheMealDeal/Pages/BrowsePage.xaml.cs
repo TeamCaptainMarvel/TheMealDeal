@@ -9,7 +9,6 @@
         public BrowsePage()
         {
             this.InitializeComponent();
-            this.DataContext = new BrowseViewModel();
         }
 
         private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)

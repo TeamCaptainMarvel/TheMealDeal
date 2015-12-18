@@ -95,6 +95,7 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Pages\AddRecipePage.xaml.cs">
       <DependentUpon>AddRecipePage.xaml</DependentUpon>
     </Compile>
@@ -115,12 +116,12 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
-    <Compile Include="ViewModels\BrowseViewModel.cs" />
+    <Compile Include="ViewModels\RecipesViewModel.cs" />
     <Compile Include="ViewModels\RecipeViewModel.cs" />
     <Compile Include="ViewModels\TypeViewModel.cs" />
     <Compile Include="ViewModels\UserViewModel.cs" />
-    <Compile Include="Views\RecipeBrowseView.xaml.cs">
-      <DependentUpon>RecipeBrowseView.xaml</DependentUpon>
+    <Compile Include="Views\RecipesView.xaml.cs">
+      <DependentUpon>RecipesView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -175,7 +176,7 @@
       <Generator>MSBuild:Compile</Generator>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Page>
-    <Page Include="Views\RecipeBrowseView.xaml">
+    <Page Include="Views\RecipesView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
