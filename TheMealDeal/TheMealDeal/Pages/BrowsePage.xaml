@@ -15,29 +15,17 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Page.Resources>
-
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <RelativePanel>
-            <Image 
-                Source="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTlI9wKwCkg9M6CGf7eo1yUE8BOu7AsIAu_nJpQUrYD3K5C6SBk"/>
-            <RelativePanel RelativePanel.AlignBottomWithPanel="True">
-                <TextBlock Name="Title"
-                Text="Sandwitch" 
-                FontSize="40" 
-                FontFamily="Verdana" 
-                Foreground="White">
-                </TextBlock>
-                <TextBlock
-                Text="hjsadjsadui ahdaskhdas jahkhj agjkdh hdhhd hdhiw ndlqlhd edekhe dnhkaqh qlkh qiqljrl djk ahdjhakjhdkjak"
-                TextWrapping="Wrap"
-                FontSize="20" 
-                FontFamily="Verdana" 
-                Foreground="White"
-                Margin="0, 10, 0, 0"
-                RelativePanel.Below="Title">
-
-                </TextBlock>
-            </RelativePanel>
-        </RelativePanel>
+        <Pivot Title="Browse Recepies" Foreground="#FBAD17">
+            <PivotItem Header="Vegeterian" FontFamily="Verdana" >
+                <Grid/>
+            </PivotItem>
+            <PivotItem Header="Vegan" FontFamily="Verdana">
+                <Grid/>
+            </PivotItem>
+            <PivotItem Header="Meat" FontFamily="Verdana">
+                <Grid/>
+            </PivotItem>
+        </Pivot>
     </Grid>
 </Page>

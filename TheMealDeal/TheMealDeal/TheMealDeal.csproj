@@ -114,9 +114,11 @@
       <DependentUpon>SearchByIngredientsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModels\Recipe.cs" />
-    <Compile Include="ViewModels\Type.cs" />
-    <Compile Include="ViewModels\User.cs" />
+    <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\BrowseViewModel.cs" />
+    <Compile Include="ViewModels\RecipeViewModel.cs" />
+    <Compile Include="ViewModels\TypeViewModel.cs" />
+    <Compile Include="ViewModels\UserViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">

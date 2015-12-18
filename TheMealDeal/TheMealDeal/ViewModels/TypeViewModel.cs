@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TheMealDeal.ViewModels
 {
-    public enum Type
+    public enum TypeViewModel
     {
         vegeterian, vegan, meat
     }
