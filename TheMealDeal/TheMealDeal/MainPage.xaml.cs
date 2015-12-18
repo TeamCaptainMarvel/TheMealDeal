@@ -37,7 +37,7 @@ namespace TheMealDeal
 
         private void BrowseButton_Click(object sender, RoutedEventArgs e)
         {
-
+            Frame.Navigate(typeof(BrowsePage));
         }
 
         private void SearchButton_Click(object sender, RoutedEventArgs e)
@@ -47,7 +47,7 @@ namespace TheMealDeal
 
         private void FavButotn_Click(object sender, RoutedEventArgs e)
         {
-
+            Frame.Navigate(typeof(FavouritesPage));
         }
 
         private void AddButton_Click(object sender, RoutedEventArgs e)

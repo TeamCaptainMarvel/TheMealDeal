@@ -12,33 +12,24 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using TheMealDeal.ViewModels;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace TheMealDeal
+namespace TheMealDeal.Pages
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class AddRecipePage : Page
+    public sealed partial class BrowsePage : Page
     {
-        
-
-        public AddRecipePage()
+        public BrowsePage()
         {
             this.InitializeComponent();
+        }
 
-            Recipe newRecipe = new Recipe
-            {
-                Title = titleBox.Text,
-                Description = descriptionBox.Text,
-                //get ingredients
-                //get radio button value with mvvm and binding
-                //http://wpftutorial.net/RadioButton.html
+        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        {
 
-            };
-            //ADD the recipe to a base :D
         }
     }
 }

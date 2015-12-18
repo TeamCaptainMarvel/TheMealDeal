@@ -1,0 +1,43 @@
+﻿<Page
+    x:Class="TheMealDeal.Pages.BrowsePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TheMealDeal.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:data="using:TheMealDeal.ViewModels"
+    xmlns:styles="using:TheMealDeal.Styles"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles/StylesDictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <RelativePanel>
+            <Image 
+                Source="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTlI9wKwCkg9M6CGf7eo1yUE8BOu7AsIAu_nJpQUrYD3K5C6SBk"/>
+            <RelativePanel RelativePanel.AlignBottomWithPanel="True">
+                <TextBlock Name="Title"
+                Text="Sandwitch" 
+                FontSize="40" 
+                FontFamily="Verdana" 
+                Foreground="White">
+                </TextBlock>
+                <TextBlock
+                Text="hjsadjsadui ahdaskhdas jahkhj agjkdh hdhhd hdhiw ndlqlhd edekhe dnhkaqh qlkh qiqljrl djk ahdjhakjhdkjak"
+                TextWrapping="Wrap"
+                FontSize="20" 
+                FontFamily="Verdana" 
+                Foreground="White"
+                Margin="0, 10, 0, 0"
+                RelativePanel.Below="Title">
+
+                </TextBlock>
+            </RelativePanel>
+        </RelativePanel>
+    </Grid>
+</Page>

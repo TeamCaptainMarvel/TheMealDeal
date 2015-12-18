@@ -17,5 +17,9 @@ namespace TheMealDeal.ViewModels
         public IEnumerable<string> Ingredients { get; set; }
 
         public string Description { get; set; }
+
+        public Type Type { get; set; }
+
+        public string ImageUrl { get; set; }
     }
 }
