@@ -6,9 +6,10 @@ namespace TheMealDeal.ViewModels
     public class RecipeViewModel : BaseViewModel
     {
         private string title;
-        private IEnumerable<string> ingredients;
+        private string ingredients;
         private string description;
         private string type;
+        private string imageUrl;
 
         public string Title
         {
@@ -20,7 +21,7 @@ namespace TheMealDeal.ViewModels
             }
         }
 
-        public IEnumerable<string> Ingredients
+        public string Ingredients
         {
             get { return this.ingredients; }
             set
@@ -50,12 +51,23 @@ namespace TheMealDeal.ViewModels
             }
         }
 
-        public RecipeViewModel(string title, string description, List<string> ingredients, string type)
+        public string ImageUrl
+        {
+            get { return this.imageUrl; }
+            set
+            {
+                this.imageUrl = value;
+                this.OnPropertyChanged("ImageUrl");
+            }
+        }
+
+        public RecipeViewModel(string title, string description, string ingredients, string type, string imageUrl = "http://prikachi.com/images/495/8523495D.png")
         {
             this.Title = title;
             this.Description = description;
             this.Ingredients = ingredients;
             this.Type = type;
+            this.ImageUrl = imageUrl;
         }
     }
 }

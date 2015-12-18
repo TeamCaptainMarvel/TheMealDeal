@@ -33,4 +33,29 @@
         <Setter Property="MaxWidth" Value="200"/>
         <Setter Property="RelativePanel.AlignHorizontalCenterWithPanel" Value="True"/>
     </Style>
+    <Style TargetType="TextBlock" x:Key="VegeterianRecipeTitleStyle">
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="Foreground" Value="#FBAD17"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Setter Property="RelativePanel.RightOf" Value="recipeImage"/>
+    </Style>
+    <Style TargetType="TextBlock" x:Key="RecipeIngredietsStyle">
+        <Setter Property="Foreground" Value="#FBAD17"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="RelativePanel.Below" Value="recipeTitle"/>
+        <Setter Property="RelativePanel.RightOf" Value="recipeImage"/>
+    </Style>
+    <Style TargetType="TextBlock" x:Key="RecipeDescriptionStyle">
+        <Setter Property="Foreground" Value="#FBAD17"/>
+        <Setter Property="TextWrapping" Value="WrapWholeWords"/>
+        <Setter Property="FontSize" Value="10"/>
+        <Setter Property="RelativePanel.Below" Value="recipeImage"/>
+        <Setter Property="RelativePanel.AlignHorizontalCenterWithPanel" Value="True"/>
+    </Style>
+    <Style TargetType="Image" x:Key="RecipeImageStyle">
+        <Setter Property="Margin" Value="0, 0, 5, 0"/>
+        <Setter Property="MaxWidth" Value="100"/>
+        <Setter Property="MaxHeight" Value="100"/>
+    </Style>
 </ResourceDictionary>
