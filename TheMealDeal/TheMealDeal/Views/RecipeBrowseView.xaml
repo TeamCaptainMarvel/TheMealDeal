@@ -22,7 +22,7 @@
                 <TextBlock Text="Vegeterian" Foreground="#FBAD17"></TextBlock>
             </PivotItem.Header>
             <Grid>
-                <ListView ItemsSource="{Binding Recipes}">
+                <ListView ItemsSource="{Binding VegeterianRecipes}">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <RelativePanel Height="120">
@@ -40,13 +40,39 @@
             <PivotItem.Header>
                 <TextBlock Text="Vegan" Foreground="#F47121"></TextBlock>
             </PivotItem.Header>
-            <Grid/>
+            <Grid>
+                <ListView ItemsSource="{Binding VeganRecipes}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <RelativePanel Height="120">
+                                <Image Name="recipeImage" Style="{StaticResource RecipeImageStyle}" Source="{Binding ImageUrl}"/>
+                                <TextBlock Name="recipeTitle" Text="{Binding Title}" Style="{StaticResource VegeterianRecipeTitleStyle}"></TextBlock>
+                                <TextBlock Name="ingredients" Text="{Binding Ingredients}" Style="{StaticResource RecipeIngredietsStyle}"/>
+                                <TextBlock Text="{Binding Description}" Style="{StaticResource RecipeDescriptionStyle}"></TextBlock>
+                            </RelativePanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
         </PivotItem>
         <PivotItem >
             <PivotItem.Header>
                 <TextBlock Text="Meat" Foreground="#C94727"></TextBlock>
             </PivotItem.Header>
-            <Grid/>
+            <Grid>
+                <ListView ItemsSource="{Binding MeatRecipes}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <RelativePanel Height="120">
+                                <Image Name="recipeImage" Style="{StaticResource RecipeImageStyle}" Source="{Binding ImageUrl}"/>
+                                <TextBlock Name="recipeTitle" Text="{Binding Title}" Style="{StaticResource VegeterianRecipeTitleStyle}"></TextBlock>
+                                <TextBlock Name="ingredients" Text="{Binding Ingredients}" Style="{StaticResource RecipeIngredietsStyle}"/>
+                                <TextBlock Text="{Binding Description}" Style="{StaticResource RecipeDescriptionStyle}"></TextBlock>
+                            </RelativePanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
         </PivotItem>
     </Pivot>
 
