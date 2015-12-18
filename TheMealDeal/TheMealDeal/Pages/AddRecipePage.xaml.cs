@@ -1,8 +1,6 @@
 ﻿namespace TheMealDeal
 {
-    using Windows.UI.Xaml;
     using Windows.UI.Xaml.Controls;
-    using Windows.UI.Core;
 
     public sealed partial class AddRecipePage : Page
     {

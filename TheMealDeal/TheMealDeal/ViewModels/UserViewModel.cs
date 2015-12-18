@@ -1,12 +1,4 @@
-﻿using SQLite.Net.Attributes;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TheMealDeal.ViewModels
+﻿namespace TheMealDeal.ViewModels
 {
     public class UserViewModel : BaseViewModel
     {
