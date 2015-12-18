@@ -5,19 +5,10 @@
     xmlns:local="using:TheMealDeal.Pages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:views="using:TheMealDeal.Views"
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Pivot Title="Pivot">
-            <PivotItem Header="PivotItem 0">
-                <Grid Background="AliceBlue"/>
-            </PivotItem>
-            <PivotItem Header="PivotItem 1">
-                <Grid Background="Red"/>
-            </PivotItem>
-            <PivotItem Header="PivotItem 1">
-                <Grid Background="Salmon"/>
-            </PivotItem>
-        </Pivot>
+        <views:RecipeBrowseView/>
     </Grid>
 </Page>
