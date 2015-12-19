@@ -5,6 +5,12 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheMealDealWebApi", "TheMealDealWebApi\TheMealDealWebApi.csproj", "{320BA178-AB88-4440-A580-49250A0C2E3F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{AB59D7F0-9459-4A0B-8C5F-8A470215CF3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheMealDeal.Models", "Data\TheMealDeal.Models\TheMealDeal.Models.csproj", "{0A718171-9C2A-4427-8409-34EF593953B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheMealDeal.Data", "Data\TheMealDeal.Data\TheMealDeal.Data.csproj", "{7C73B5A0-779A-4DC8-A06E-5CD22B7C36D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,8 +21,20 @@ Global
 		{320BA178-AB88-4440-A580-49250A0C2E3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{320BA178-AB88-4440-A580-49250A0C2E3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{320BA178-AB88-4440-A580-49250A0C2E3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A718171-9C2A-4427-8409-34EF593953B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A718171-9C2A-4427-8409-34EF593953B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A718171-9C2A-4427-8409-34EF593953B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A718171-9C2A-4427-8409-34EF593953B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C73B5A0-779A-4DC8-A06E-5CD22B7C36D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C73B5A0-779A-4DC8-A06E-5CD22B7C36D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C73B5A0-779A-4DC8-A06E-5CD22B7C36D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C73B5A0-779A-4DC8-A06E-5CD22B7C36D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0A718171-9C2A-4427-8409-34EF593953B9} = {AB59D7F0-9459-4A0B-8C5F-8A470215CF3B}
+		{7C73B5A0-779A-4DC8-A06E-5CD22B7C36D7} = {AB59D7F0-9459-4A0B-8C5F-8A470215CF3B}
 	EndGlobalSection
 EndGlobal
