@@ -30,7 +30,7 @@ namespace TheMealDeal.Models
             get { return this.favourites; }
             set { this.favourites = value; }
         }
-
+        //<3
         public ICollection<Recipe> MyRecipes
         {
             get { return this.myRecipes; }
