@@ -37,6 +37,12 @@ namespace TheMealDealWebApi.Models
         [Display(Name = "Email")]
         public string Email { get; set; }
 
+        [StringLength(20, ErrorMessage = "Name must be less than 2o symbols")]
+        public string Firstname { get; set; }
+
+        [StringLength(20, ErrorMessage = "Name must be less than 2o symbols")]
+        public string Lastname { get; set; }
+
         [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
         [DataType(DataType.Password)]

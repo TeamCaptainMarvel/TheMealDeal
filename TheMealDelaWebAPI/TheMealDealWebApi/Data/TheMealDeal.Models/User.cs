@@ -6,9 +6,15 @@ namespace TheMealDeal.Models
     using System.Threading.Tasks;
     using Microsoft.AspNet.Identity.EntityFramework;
     using Microsoft.AspNet.Identity;
-
+    using System.ComponentModel.DataAnnotations;
     public class User : IdentityUser
     {
+        [MaxLength(20)]
+        public string Firstname { get; set; }
+
+        [MaxLength(20)]
+        public string Lastname { get; set; }
+
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<User> manager, string authenticationType)
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType

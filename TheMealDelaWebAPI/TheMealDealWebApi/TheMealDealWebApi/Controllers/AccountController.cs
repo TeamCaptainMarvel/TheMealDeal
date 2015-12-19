@@ -14,10 +14,11 @@
     using Microsoft.Owin.Security;
     using Microsoft.Owin.Security.Cookies;
     using Microsoft.Owin.Security.OAuth;
-    using TheMealDealWebApi.Models;
-    using TheMealDealWebApi.Providers;
-    using TheMealDealWebApi.Results;
+    using Providers;
+    using Results;
     using TheMealDeal.Models;
+    using Models;
+
     [Authorize]
     [RoutePrefix("api/Account")]
     public class AccountController : ApiController
@@ -327,7 +328,13 @@
                 return BadRequest(ModelState);
             }
 
-            var user = new User() { UserName = model.Email, Email = model.Email };
+            var user = new User()
+            {
+                UserName = model.Email,
+                Email = model.Email,
+                Firstname = model.Firstname,
+                Lastname = model.Lastname
+            };
 
             IdentityResult result = await UserManager.CreateAsync(user, model.Password);
 
