@@ -9,7 +9,7 @@ namespace TheMealDealWebApi
     {
         public static void Initialize()
         {
-            Database.SetInitializer(new MigrateDatabaseToLatestVersion<TheMealDealDbContext, Configuration>());
+            Database.SetInitializer(new DropCreateDatabaseAlways<TheMealDealDbContext>());
             TheMealDealDbContext.Create().Database.Initialize(true);
         }
     }
