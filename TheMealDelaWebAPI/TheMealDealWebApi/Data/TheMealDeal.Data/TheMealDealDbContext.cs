@@ -1,8 +1,9 @@
 ﻿namespace TheMealDeal.Data
 {
+    using System.Data.Entity;
     using Microsoft.AspNet.Identity.EntityFramework;
     using Models;
-    using System.Data.Entity;
+
     public class TheMealDealDbContext : IdentityDbContext<User>
     {
         public TheMealDealDbContext()
