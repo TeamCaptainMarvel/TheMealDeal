@@ -1,6 +1,6 @@
 ﻿namespace TheMealDeal.Views
 {
-    using TheMealDeal.ViewModels;
+    using ViewModels;
     using Windows.UI.Xaml.Controls;
 
     public sealed partial class RecipesView : UserControl

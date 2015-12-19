@@ -5,7 +5,6 @@
 
     <Style TargetType="Button" x:Key="ButtonTextStyle">
         <Setter Property="Foreground" Value="White"/>
-        
         <Setter Property="FontSize" Value="22"/>
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="HorizontalAlignment" Value="Stretch"/>
@@ -33,21 +32,18 @@
         <Setter Property="MaxWidth" Value="200"/>
         <Setter Property="RelativePanel.AlignHorizontalCenterWithPanel" Value="True"/>
     </Style>
-    <Style TargetType="TextBlock" x:Key="VegeterianRecipeTitleStyle">
+    <Style TargetType="TextBlock" x:Key="RecipeTitleStyle">
         <Setter Property="FontSize" Value="20"/>
-        <Setter Property="Foreground" Value="#FBAD17"/>
         <Setter Property="TextWrapping" Value="Wrap"/>
         <Setter Property="RelativePanel.RightOf" Value="recipeImage"/>
     </Style>
     <Style TargetType="TextBlock" x:Key="RecipeIngredietsStyle">
-        <Setter Property="Foreground" Value="#FBAD17"/>
         <Setter Property="TextWrapping" Value="Wrap"/>
         <Setter Property="FontSize" Value="15"/>
         <Setter Property="RelativePanel.Below" Value="recipeTitle"/>
         <Setter Property="RelativePanel.RightOf" Value="recipeImage"/>
     </Style>
     <Style TargetType="TextBlock" x:Key="RecipeDescriptionStyle">
-        <Setter Property="Foreground" Value="#FBAD17"/>
         <Setter Property="TextWrapping" Value="WrapWholeWords"/>
         <Setter Property="FontSize" Value="10"/>
         <Setter Property="RelativePanel.Below" Value="recipeImage"/>

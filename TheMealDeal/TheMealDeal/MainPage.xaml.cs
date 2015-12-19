@@ -4,7 +4,8 @@
     using Windows.UI.Xaml;
     using Windows.UI.Xaml.Controls;
     using TheMealDeal.Pages;
-    
+    using Windows.UI.Xaml.Media;
+
     public sealed partial class MainPage : Page
     {
         private string path;

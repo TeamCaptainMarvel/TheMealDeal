@@ -34,6 +34,7 @@
             <TextBlock Text="The Meal Deal" HorizontalAlignment="Center" SelectionHighlightColor="#000078D7" Foreground="#FFC94727" FontSize="40" FontFamily="Verdana" SelectionChanged="TextBlock_SelectionChanged" Height="49" Margin="0,0,0,-0.333" VerticalAlignment="Top"/>
         </RelativePanel>
         <Button Name="SearchButton" Click="SearchButton_Click" Style="{StaticResource ButtonTextStyle}" Grid.Column="0" Grid.Row="2" Background="#FECF63">
+            <!--#FECF63  #FFDE9C05-->
             <RelativePanel>
                 <Image MaxHeight="50" Source="Assets/search.png"/>
             </RelativePanel>

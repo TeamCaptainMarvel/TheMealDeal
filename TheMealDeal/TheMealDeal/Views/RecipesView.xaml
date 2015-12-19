@@ -16,58 +16,58 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </UserControl.Resources>
-    <Pivot Title="Browse Recepies" Foreground="#FECF63">
-        <PivotItem>
-            <PivotItem.Header>
+        <Pivot Title="Browse Recepies" Foreground="#FECF63">
+            <PivotItem>
+                <PivotItem.Header>
                 <TextBlock Text="Vegeterian" Foreground="#FBAD17"></TextBlock>
             </PivotItem.Header>
-            <Grid>
-                <ListView ItemsSource="{Binding VegeterianRecipes}">
+                <Grid>
+                    <ListView ItemsSource="{Binding VegeterianRecipes}">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <RelativePanel Height="120">
                                 <Image Name="recipeImage" Style="{StaticResource RecipeImageStyle}" Source="{Binding ImageUrl}"/>
-                                <TextBlock Name="recipeTitle" Text="{Binding Title}" Style="{StaticResource VegeterianRecipeTitleStyle}"></TextBlock>
-                                <TextBlock Name="ingredients" Text="{Binding Ingredients}" Style="{StaticResource RecipeIngredietsStyle}"/>
-                                <TextBlock Text="{Binding Description}" Style="{StaticResource RecipeDescriptionStyle}"></TextBlock>
+                                <TextBlock Name="recipeTitle" Text="{Binding Title}" Style="{StaticResource RecipeTitleStyle}" Foreground="#FBAD17"></TextBlock>
+                                <TextBlock Name="ingredients" Text="{Binding Ingredients}" Style="{StaticResource RecipeIngredietsStyle}" Foreground="#FBAD17"/>
+                                <TextBlock Text="{Binding Description}" Style="{StaticResource RecipeDescriptionStyle}" Foreground="#FBAD17"></TextBlock>
                             </RelativePanel>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
             </Grid>
-        </PivotItem>
-        <PivotItem>
+            </PivotItem>
+            <PivotItem>
             <PivotItem.Header>
                 <TextBlock Text="Vegan" Foreground="#F47121"></TextBlock>
             </PivotItem.Header>
-            <Grid>
-                <ListView ItemsSource="{Binding VeganRecipes}">
+                <Grid>
+                    <ListView ItemsSource="{Binding VeganRecipes}">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <RelativePanel Height="120">
                                 <Image Name="recipeImage" Style="{StaticResource RecipeImageStyle}" Source="{Binding ImageUrl}"/>
-                                <TextBlock Name="recipeTitle" Text="{Binding Title}" Style="{StaticResource VegeterianRecipeTitleStyle}"></TextBlock>
-                                <TextBlock Name="ingredients" Text="{Binding Ingredients}" Style="{StaticResource RecipeIngredietsStyle}"/>
-                                <TextBlock Text="{Binding Description}" Style="{StaticResource RecipeDescriptionStyle}"></TextBlock>
+                                <TextBlock Name="recipeTitle" Text="{Binding Title}" Style="{StaticResource RecipeTitleStyle}" Foreground="#F47121"></TextBlock>
+                                <TextBlock Name="ingredients" Text="{Binding Ingredients}" Style="{StaticResource RecipeIngredietsStyle}" Foreground="#F47121"/>
+                                <TextBlock Text="{Binding Description}" Style="{StaticResource RecipeDescriptionStyle}" Foreground="#F47121"></TextBlock>
                             </RelativePanel>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
             </Grid>
         </PivotItem>
-        <PivotItem >
+            <PivotItem>
             <PivotItem.Header>
                 <TextBlock Text="Meat" Foreground="#C94727"></TextBlock>
             </PivotItem.Header>
-            <Grid>
-                <ListView ItemsSource="{Binding MeatRecipes}">
+                <Grid>
+                    <ListView ItemsSource="{Binding MeatRecipes}">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <RelativePanel Height="120">
                                 <Image Name="recipeImage" Style="{StaticResource RecipeImageStyle}" Source="{Binding ImageUrl}"/>
-                                <TextBlock Name="recipeTitle" Text="{Binding Title}" Style="{StaticResource VegeterianRecipeTitleStyle}"></TextBlock>
-                                <TextBlock Name="ingredients" Text="{Binding Ingredients}" Style="{StaticResource RecipeIngredietsStyle}"/>
-                                <TextBlock Text="{Binding Description}" Style="{StaticResource RecipeDescriptionStyle}"></TextBlock>
+                                <TextBlock Name="recipeTitle" Text="{Binding Title}" Style="{StaticResource RecipeTitleStyle}" Foreground="#C94727"></TextBlock>
+                                <TextBlock Name="ingredients" Text="{Binding Ingredients}" Style="{StaticResource RecipeIngredietsStyle}" Foreground="#C94727"/>
+                                <TextBlock Text="{Binding Description}" Style="{StaticResource RecipeDescriptionStyle}" Foreground="#C94727"></TextBlock>
                             </RelativePanel>
                         </DataTemplate>
                     </ListView.ItemTemplate>
@@ -75,5 +75,4 @@
             </Grid>
         </PivotItem>
     </Pivot>
-
-</UserControl>
+    </UserControl>
