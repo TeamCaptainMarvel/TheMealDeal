@@ -18,7 +18,7 @@
         {
             var result = this.db
                 .Recipes
-                .OrderBy(r => r.Ingredients)
+                .OrderBy(r => r.Type)
                 .ToList();
 
             return this.Ok(result);
@@ -49,10 +49,14 @@
                 }
                 recipe.MatchProcentage = (100 * inputIngredientCount) / recipeIngredientsCount;
                 matched.Add(recipe);
-
-                var result = matched.OrderBy(r => r.MatchProcentage).ToList();
-                return this.Ok(matched);
             }
+
+            var result = matched
+                    .OrderBy(r => r.MatchProcentage)
+                    .ThenBy(r => r.Type)
+                    .ToList();
+
+            return this.Ok(result);
         }
 
         private int TypeConverter(string type)
