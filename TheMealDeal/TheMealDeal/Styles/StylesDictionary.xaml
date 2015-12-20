@@ -54,4 +54,6 @@
         <Setter Property="MaxWidth" Value="100"/>
         <Setter Property="MaxHeight" Value="100"/>
     </Style>
+    
+    
 </ResourceDictionary>

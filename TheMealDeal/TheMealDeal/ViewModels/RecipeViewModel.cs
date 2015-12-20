@@ -61,6 +61,10 @@ namespace TheMealDeal.ViewModels
             }
         }
 
+        public RecipeViewModel()
+        {
+        }
+
         public RecipeViewModel(string title, string description, string ingredients, string type, string imageUrl = "http://prikachi.com/images/495/8523495D.png")
         {
             this.Title = title;

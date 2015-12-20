@@ -6,7 +6,6 @@
 
     public class RecipesViewModel
     {
-        //3 collections for the 3 types of recipes
         private ObservableCollection<RecipeViewModel> vegeterianRecipes;
         private ObservableCollection<RecipeViewModel> veganRecipes;
         private ObservableCollection<RecipeViewModel> meatRecipes;
@@ -50,7 +49,9 @@
                 this.meatRecipes.AddRange(value);
             }
         }
-
+        /// <summary>
+        /// Make like pavkata userDBVM
+        /// </summary>
         public RecipesViewModel()
         {
             this.VegeterianRecipes = new RecipeViewModel[]

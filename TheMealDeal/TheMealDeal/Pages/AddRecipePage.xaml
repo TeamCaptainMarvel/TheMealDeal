@@ -70,14 +70,14 @@
                     Style="{StaticResource TextBoxStyles}"></TextBox>
                 </RelativePanel>
                 <RelativePanel Name="typePanel" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.Below="ingredientsPanel">
-                    <RadioButton GroupName="mealType" Name="meat" Content="Meat" Foreground="#FFFBAD17"></RadioButton>
-                    <RadioButton GroupName="mealType" Name="vegeterian" Content="Vegeterian" Foreground="#FFFBAD17" RelativePanel.Below="meat"></RadioButton>
-                    <RadioButton GroupName="mealType" Name="vegan" Content="Vegan" Foreground="#FFFBAD17" RelativePanel.Below="vegeterian"></RadioButton>
+                    <RadioButton Checked="meat_Checked"  GroupName="mealType" Name="meat" Content="Meat" Foreground="#FFFBAD17"></RadioButton>
+                    <RadioButton Checked="vegeterian_Checked" GroupName="mealType" Name="vegeterian" Content="Vegeterian" Foreground="#FFFBAD17" RelativePanel.Below="meat"></RadioButton>
+                    <RadioButton Checked="vegan_Checked"  GroupName="mealType" Name="vegan" Content="Vegan" Foreground="#FFFBAD17" RelativePanel.Below="vegeterian"></RadioButton>
                 </RelativePanel>
             </RelativePanel>
             
         </ScrollViewer>
-        <Button Grid.Row="2" Style="{StaticResource ButtonTextStyle}" Background="#FFFBAD17">
+        <Button Name="AddRecipe" Grid.Row="2" Click="AddRecipe_Click"  Style="{StaticResource ButtonTextStyle}" Background="#FFFBAD17">
             <RelativePanel>
                 <Image MaxHeight="50" Source="/Assets/add.png"/>
             </RelativePanel>
