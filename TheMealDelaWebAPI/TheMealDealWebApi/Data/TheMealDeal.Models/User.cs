@@ -8,7 +8,7 @@ namespace TheMealDeal.Models
     using Microsoft.AspNet.Identity;
     using System.ComponentModel.DataAnnotations;
     using System.Collections.Generic;
-
+    using Common.Constants;
     public class User : IdentityUser
     {
         private ICollection<Recipe> favourites;
@@ -19,10 +19,10 @@ namespace TheMealDeal.Models
             this.favourites = new HashSet<Recipe>();
             this.myRecipes = new HashSet<Recipe>();
         }
-        [MaxLength(20)]
+        [MaxLength(ValidationConstants.UserNameMaxLenght)]
         public string Firstname { get; set; }
 
-        [MaxLength(20)]
+        [MaxLength(ValidationConstants.UserNameMaxLenght)]
         public string Lastname { get; set; }
 
         public ICollection<Recipe> Favourites

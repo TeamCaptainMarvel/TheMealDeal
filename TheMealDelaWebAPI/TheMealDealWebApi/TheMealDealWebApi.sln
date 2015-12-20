@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheMealDeal.Models", "Data\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheMealDeal.Data", "Data\TheMealDeal.Data\TheMealDeal.Data.csproj", "{7C73B5A0-779A-4DC8-A06E-5CD22B7C36D7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheMealDeal.Common", "TheMealDeal.Common\TheMealDeal.Common.csproj", "{E04B4DBB-7D1B-4525-A29D-16E181FFE517}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{7C73B5A0-779A-4DC8-A06E-5CD22B7C36D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C73B5A0-779A-4DC8-A06E-5CD22B7C36D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C73B5A0-779A-4DC8-A06E-5CD22B7C36D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E04B4DBB-7D1B-4525-A29D-16E181FFE517}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E04B4DBB-7D1B-4525-A29D-16E181FFE517}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E04B4DBB-7D1B-4525-A29D-16E181FFE517}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E04B4DBB-7D1B-4525-A29D-16E181FFE517}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

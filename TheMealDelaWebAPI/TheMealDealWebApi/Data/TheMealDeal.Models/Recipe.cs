@@ -1,5 +1,6 @@
 ﻿namespace TheMealDeal.Models
 {
+    using Common.Constants;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
 
@@ -7,14 +8,20 @@
     {
         private string title;
         private string description;
-        private IList<string> ingredients;
+        private ICollection<Ingredient> ingredients;
         private Type type;
+        private int matchProcentage;
+
+        public Recipe()
+        {
+            this.ingredients = new List<Ingredient>();
+        }
 
         [Key]
         public int Id { get; set; }
 
         [Required]
-        [MaxLength(35)]
+        [MaxLength(ValidationConstants.RecipeTitleMaxLenght)]
         public string Title
         {
             get { return this.title; }
@@ -22,7 +29,7 @@
         }
          
         [Required]
-        [MaxLength(200)]
+        [MinLength(ValidationConstants.RecipeDescriptionMinLength)]
         public string Description
         {
             get { return this.description; }
@@ -30,16 +37,23 @@
         }
 
         [Required]
-        public IList<string> Ingredients
+        public ICollection<Ingredient> Ingredients
         {
             get { return this.ingredients; }
             set { this.ingredients = value; }
         }
+
         [Required]
         public Type Type
         {
             get { return this.type; }
             set { this.type = value; }
+        }
+
+        public int MatchProcentage
+        {
+            get { return this.matchProcentage; }
+            set { this.matchProcentage = value; }
         }
 
         public string UserId { get; set; }

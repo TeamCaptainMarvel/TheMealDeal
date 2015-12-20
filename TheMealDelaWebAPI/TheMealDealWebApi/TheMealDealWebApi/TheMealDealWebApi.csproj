@@ -205,11 +205,14 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\RecipesController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Account\AccountBindingModels.cs" />
-    <Compile Include="Models\Account\AccountViewModels.cs" />
+    <Compile Include="Models\AccountModels\AccountBindingModels.cs" />
+    <Compile Include="Models\AccountModels\AccountViewModels.cs" />
+    <Compile Include="Models\TheMealDealModels\AddRecipeRequestModel.cs" />
+    <Compile Include="Models\TheMealDealModels\RecipeResponseModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
@@ -238,6 +241,10 @@
     <ProjectReference Include="..\Data\TheMealDeal.Models\TheMealDeal.Models.csproj">
       <Project>{0a718171-9c2a-4427-8409-34ef593953b9}</Project>
       <Name>TheMealDeal.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TheMealDeal.Common\TheMealDeal.Common.csproj">
+      <Project>{e04b4dbb-7d1b-4525-a29d-16e181ffe517}</Project>
+      <Name>TheMealDeal.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

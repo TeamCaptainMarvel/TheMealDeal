@@ -12,6 +12,7 @@
         }
 
         public virtual IDbSet<Recipe> Recipes { get; set; }
+        public virtual IDbSet<Ingredient> Ingredients { get; set; }
 
         public static TheMealDealDbContext Create()
         {
