@@ -4,6 +4,7 @@
     using Windows.UI.Xaml;
     using ViewModels;
     using Pages;
+
     public sealed partial class AddRecipePage : Page
     {
         private string mealType;

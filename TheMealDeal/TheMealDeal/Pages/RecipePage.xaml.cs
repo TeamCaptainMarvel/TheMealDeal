@@ -6,15 +6,20 @@
 
     public sealed partial class RecipePage : Page
     {
-        public RecipePage()
+        public RecipePage(RecipeViewModel viewModel)
         {
             this.InitializeComponent();
-            this.DataContext = new RecipeViewModel();
+            this.ViewModel = viewModel;
+        }
+
+        public RecipeViewModel ViewModel
+        {
+            get { return this.DataContext as RecipeViewModel; }
+            set { this.DataContext = value; }
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs recipe)
         {
-
             ShowStoryboard.Begin();
         }
     }

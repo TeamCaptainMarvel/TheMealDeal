@@ -1,6 +1,4 @@
-﻿using TheMealDeal.Commands;
-
-namespace TheMealDeal.ViewModels
+﻿namespace TheMealDeal.ViewModels
 {
     public class AddRecipePageViewModel : BaseViewModel
     {
