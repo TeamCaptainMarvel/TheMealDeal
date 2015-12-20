@@ -60,7 +60,7 @@
                     TextWrapping="Wrap"></TextBlock>
             </RelativePanel>
         </RelativePanel>
-        <Button Grid.Row="2" Style="{StaticResource ButtonTextStyle}" Background="#FECF63">
+        <Button Name="SearchButton" Grid.Row="2" Click="SearchButton_Click"  Style="{StaticResource ButtonTextStyle}" Background="#FECF63">
             <RelativePanel>
                 <Image MaxHeight="50" Source="/Assets/search.png"/>
             </RelativePanel>

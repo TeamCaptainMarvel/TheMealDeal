@@ -24,7 +24,7 @@
                 Type = mealType
             };
             //TODO: Add the recipe somewhere
-            Frame.Navigate(typeof(RecipePage), newRecipe);
+            Frame.Navigate(typeof(RecipePage));
         }
 
         private void vegeterian_Checked(object sender, Windows.UI.Xaml.RoutedEventArgs e)

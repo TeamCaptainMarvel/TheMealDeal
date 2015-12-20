@@ -8,6 +8,7 @@ namespace TheMealDeal.ViewModels
         private string title;
         private string ingredients;
         private string description;
+        private string method;
         private string type;
         private string imageUrl;
 
@@ -40,6 +41,17 @@ namespace TheMealDeal.ViewModels
                 this.OnPropertyChanged("Description");
             }
         }
+
+        public string Method
+        {
+            get { return this.method; }
+            set
+            {
+                this.method = value;
+                this.OnPropertyChanged("Method");
+            }
+        }
+
 
         public string Type
         {
