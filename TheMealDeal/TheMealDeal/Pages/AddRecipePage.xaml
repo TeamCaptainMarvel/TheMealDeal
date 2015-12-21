@@ -95,7 +95,7 @@
                         <Button MinHeight="40" MinWidth="70" Style="{StaticResource ButtonTextStyle}" Background="#DC8E13">
                             <Image MaxHeight="40" Source="/Assets/gallery.png"></Image>
                         </Button>
-                        <Button MinHeight="40" MinWidth="70" Grid.Column="1" Style="{StaticResource ButtonTextStyle}" Background="#DC8E13">
+                        <Button Name="CamButton" Click="CamButton_Click" MinHeight="40" MinWidth="70" Grid.Column="1" Style="{StaticResource ButtonTextStyle}" Background="#DC8E13">
                             <Image MaxHeight="40"  Source="/Assets/camera.png"></Image>
                         </Button>
                     </Grid>

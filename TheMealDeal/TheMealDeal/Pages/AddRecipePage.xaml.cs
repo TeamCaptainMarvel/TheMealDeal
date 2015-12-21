@@ -4,7 +4,8 @@
     using Windows.UI.Xaml;
     using ViewModels;
     using Pages;
-
+    using System;
+    using Windows.Media.Capture;
     public sealed partial class AddRecipePage : Page
     {
         private string mealType;
@@ -42,6 +43,15 @@
             mealType = "vegan";
         }
 
+        private void CamButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.InitCamera();
+        }
 
+        private async void InitCamera()
+        {
+            var cam = new CameraCaptureUI();
+            var photo = await cam.CaptureFileAsync(CameraCaptureUIMode.Photo);
+        }
     }
 }
