@@ -28,7 +28,6 @@
                             <RelativePanel Height="120">
                                 <Image Name="recipeImage" Style="{StaticResource RecipeImageStyle}" Source="{Binding ImageUrl}"/>
                                 <TextBlock Name="recipeTitle" Text="{Binding Title}" Style="{StaticResource RecipeTitleStyle}" Foreground="#FBAD17"></TextBlock>
-                                <TextBlock Name="ingredients" Text="{Binding Ingredients}" Style="{StaticResource RecipeIngredietsStyle}" Foreground="#FBAD17"/>
                                 <TextBlock Text="{Binding Description}" Style="{StaticResource RecipeDescriptionStyle}" Foreground="#FBAD17"></TextBlock>
                             </RelativePanel>
                         </DataTemplate>
@@ -47,7 +46,6 @@
                             <RelativePanel Height="120">
                                 <Image Name="recipeImage" Style="{StaticResource RecipeImageStyle}" Source="{Binding ImageUrl}"/>
                                 <TextBlock Name="recipeTitle" Text="{Binding Title}" Style="{StaticResource RecipeTitleStyle}" Foreground="#F47121"></TextBlock>
-                                <TextBlock Name="ingredients" Text="{Binding Ingredients}" Style="{StaticResource RecipeIngredietsStyle}" Foreground="#F47121"/>
                                 <TextBlock Text="{Binding Description}" Style="{StaticResource RecipeDescriptionStyle}" Foreground="#F47121"></TextBlock>
                             </RelativePanel>
                         </DataTemplate>
@@ -66,7 +64,6 @@
                             <RelativePanel Height="120">
                                 <Image Name="recipeImage" Style="{StaticResource RecipeImageStyle}" Source="{Binding ImageUrl}"/>
                                 <TextBlock Name="recipeTitle" Text="{Binding Title}" Style="{StaticResource RecipeTitleStyle}" Foreground="#C94727"></TextBlock>
-                                <TextBlock Name="ingredients" Text="{Binding Ingredients}" Style="{StaticResource RecipeIngredietsStyle}" Foreground="#C94727"/>
                                 <TextBlock Text="{Binding Description}" Style="{StaticResource RecipeDescriptionStyle}" Foreground="#C94727"></TextBlock>
                             </RelativePanel>
                         </DataTemplate>

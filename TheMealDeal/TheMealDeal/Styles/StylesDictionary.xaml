@@ -46,8 +46,9 @@
     <Style TargetType="TextBlock" x:Key="RecipeDescriptionStyle">
         <Setter Property="TextWrapping" Value="WrapWholeWords"/>
         <Setter Property="FontSize" Value="10"/>
-        <Setter Property="RelativePanel.Below" Value="recipeImage"/>
-        <Setter Property="RelativePanel.AlignHorizontalCenterWithPanel" Value="True"/>
+        <Setter Property="TextAlignment" Value="Justify"/>
+        <Setter Property="RelativePanel.Below" Value="recipeTitle"/>
+        <Setter Property="RelativePanel.RightOf" Value="recipeImage"/>
     </Style>
     <Style TargetType="Image" x:Key="RecipeImageStyle">
         <Setter Property="Margin" Value="0, 0, 5, 0"/>

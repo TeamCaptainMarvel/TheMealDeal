@@ -11,7 +11,7 @@
 
         private void SearchButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(BrowsePage));
+            Frame.Navigate(typeof(RecipePage));
         }
     }
 }
