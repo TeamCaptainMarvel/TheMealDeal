@@ -6,6 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:styles ="using:TheMealDeal.Styles"
+    xmlns:convert="using:TheMealDeal.Converter"
     mc:Ignorable="d">
     <Page.Resources>
         <ResourceDictionary>
@@ -51,6 +52,7 @@
                 Source="{Binding ImageUrl}">
             </Image>
         </StackPanel>
+        
         <RelativePanel Name="TitleHolder" Grid.ColumnSpan="2" Grid.Row="1">
             <TextBlock Text="{Binding Title}"
                        Style="{StaticResource PageTitlesStyle}"
@@ -62,10 +64,79 @@
             <TextBlock Name="description"
                        Text="{Binding Description}"
                        Style="{StaticResource RecipePageDescriptionStyle}"
-                       
                        ></TextBlock>
         </RelativePanel>
+        <Button Name="IngredientsButton" Click="IngredientsButton_Click" Command="{Binding ShowIngredients}"  Style="{StaticResource ButtonTextStyle}" Grid.Row="3">
+            <RelativePanel>
+                <Image MaxHeight="50" Source="/Assets/list.png"/>
+            </RelativePanel>
+        </Button>
 
-        
+        <Button Name="BrowseButton" Click="BrowseButton_Click" Command="{Binding ShowMethod}"  Style="{StaticResource ButtonTextStyle}" Grid.Column="1" Grid.Row="3">
+            <RelativePanel>
+                <Image MaxHeight="50" Source="/Assets/browse.png"/>
+            </RelativePanel>
+        </Button>
+
+        <Grid Name="ingredientsHolder"
+              Grid.ColumnSpan="2"
+              Grid.Row="3">
+            <Grid.Resources>
+                <convert:BoolToVisibilityConverter x:Key="visibilityConvert"/>
+            </Grid.Resources>
+            <RelativePanel Visibility="{Binding IngredientsVisible, Converter={StaticResource visibilityConvert}}">
+                <RelativePanel.Resources>
+                    <Storyboard x:Name="IngredientsFadeIn">
+                        <DoubleAnimation Storyboard.TargetName="IngredientsScroll"
+                                     Storyboard.TargetProperty="Opacity"
+                                     From="0" To="1"
+                                     Duration="0:0:1"/>
+                    </Storyboard>
+                </RelativePanel.Resources>
+                <ScrollViewer Name="IngredientsScroll" Background="White">
+                    <TextBlock Style="{StaticResource PopUpsRecipePageStyle}" Text="{Binding Ingredients}"></TextBlock>
+                </ScrollViewer>
+                <Button Command="{Binding ShowButtons}"
+                        RelativePanel.AlignRightWithPanel="True"
+                        RelativePanel.AlignBottomWithPanel="True">
+                    <RelativePanel>
+                        <Image MaxHeight="20" Source="/Assets/close.png"/>
+                    </RelativePanel>
+                </Button>
+            </RelativePanel>
+        </Grid>
+
+        <Grid Name="methodHolder"
+              Grid.ColumnSpan="2"
+              Grid.Row="3">
+            <Grid.Resources>
+                <convert:BoolToVisibilityConverter x:Key="visibilityConvert"/>
+            </Grid.Resources>
+            <RelativePanel Visibility="{Binding MethodVisible, Converter={StaticResource visibilityConvert}}">
+                <RelativePanel.Resources>
+                    <Storyboard x:Name="MethodFadeIn">
+                        <DoubleAnimation Storyboard.TargetName="MethodScroll"
+                                     Storyboard.TargetProperty="Opacity"
+                                     From="0" To="1"
+                                     Duration="0:0:1"/>
+                    </Storyboard>
+                </RelativePanel.Resources>
+                <ScrollViewer Name="MethodScroll" Background="White">
+                    <TextBlock Style="{StaticResource PopUpsRecipePageStyle}" Text="{Binding Method}"></TextBlock>
+                </ScrollViewer>
+                <Button Command="{Binding ShowButtons}"
+                        RelativePanel.AlignRightWithPanel="True"
+                        RelativePanel.AlignBottomWithPanel="True">
+                    <RelativePanel>
+                        <Image MaxHeight="20" Source="/Assets/close.png"/>
+                    </RelativePanel>
+                </Button>
+            </RelativePanel>
+        </Grid>
+        <Button Name="FavouriteButton" Click="FavouriteButton_Click"  Style="{StaticResource ButtonTextStyle}" Grid.ColumnSpan="2" Grid.Row="4" Background="#FFC94727">
+            <RelativePanel>
+                <Image MaxHeight="50" Source="/Assets/favourites.png"/>
+            </RelativePanel>
+        </Button>
     </Grid>
 </Page>

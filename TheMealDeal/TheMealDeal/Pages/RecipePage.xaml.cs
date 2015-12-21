@@ -3,10 +3,10 @@
     using Windows.UI.Xaml.Controls;
     using TheMealDeal.ViewModels;
     using Windows.UI.Xaml.Navigation;
+    using Windows.UI.Xaml;
 
     public sealed partial class RecipePage : Page
     {
-
         public RecipePage()
         {
             this.InitializeComponent();
@@ -24,6 +24,21 @@
         protected override void OnNavigatedTo(NavigationEventArgs recipe)
         {
             ShowStoryboard.Begin();
+        }
+
+        private void FavouriteButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BrowseButton_Click(object sender, RoutedEventArgs e)
+        {
+            MethodFadeIn.Begin();
+        }
+
+        private void IngredientsButton_Click(object sender, RoutedEventArgs e)
+        {
+            IngredientsFadeIn.Begin();
         }
     }
 }

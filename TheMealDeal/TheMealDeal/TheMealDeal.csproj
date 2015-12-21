@@ -96,6 +96,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commands\DelegateCommand.cs" />
+    <Compile Include="Converter\BoolToVisibilityConverter.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Pages\AddRecipePage.xaml.cs">
       <DependentUpon>AddRecipePage.xaml</DependentUpon>
@@ -137,8 +138,10 @@
   <ItemGroup>
     <Content Include="Assets\add.png" />
     <Content Include="Assets\browse.png" />
+    <Content Include="Assets\close.png" />
     <Content Include="Assets\favourites.png" />
     <Content Include="Assets\fork.png" />
+    <Content Include="Assets\list.png" />
     <Content Include="Assets\mixer.png" />
     <Content Include="Assets\search.png" />
     <Content Include="Properties\Default.rd.xml" />

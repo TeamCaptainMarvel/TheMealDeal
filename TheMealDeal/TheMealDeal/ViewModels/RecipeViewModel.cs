@@ -1,7 +1,10 @@
 ﻿using SQLite.Net.Attributes;
 namespace TheMealDeal.ViewModels
 {
+    using Commands;
     using System.Collections.Generic;
+    using System.Windows.Input;
+    using System;
 
     public class RecipeViewModel : BaseViewModel
     {
@@ -11,6 +14,13 @@ namespace TheMealDeal.ViewModels
         private string method;
         private string type;
         private string imageUrl;
+        private bool ingredientsVisible;
+        private bool buttonsVisible;
+        private bool methodVisible;
+        private ICommand showIngredients;
+        private ICommand showButtons;
+        private ICommand showMethod;
+
 
         public string Title
         {
@@ -52,7 +62,6 @@ namespace TheMealDeal.ViewModels
             }
         }
 
-
         public string Type
         {
             get { return this.type; }
@@ -71,6 +80,97 @@ namespace TheMealDeal.ViewModels
                 this.imageUrl = value;
                 this.OnPropertyChanged("ImageUrl");
             }
+        }
+
+        public bool IngredientsVisible
+        {
+            get { return this.ingredientsVisible; }
+            set
+            {
+                this.ingredientsVisible = value;
+                this.OnPropertyChanged("IngredientsVisible");
+            }
+        }
+
+        public bool ButtonsVisible
+        {
+            get { return this.buttonsVisible; }
+            set
+            {
+                this.buttonsVisible = value;
+                this.OnPropertyChanged("ButtonsVisible");
+            }
+        }
+
+        public bool MethodVisible
+        {
+            get { return this.methodVisible; }
+            set
+            {
+                this.methodVisible = value;
+                this.OnPropertyChanged("MethodVisible");
+            }
+        }
+
+        public ICommand ShowMethod
+        {
+            get
+            {
+                if (this.showMethod == null)
+                {
+                    this.showMethod = new DelegateCommand(this.MethodShow);
+                }
+                return this.showMethod;
+            }
+        }
+
+        public ICommand ShowIngredients
+        {
+            get
+            {
+                if (this.showIngredients == null)
+                {
+                    this.showIngredients = new DelegateCommand(this.IngredientsShow);
+                }
+                return this.showIngredients;
+            }
+        }
+
+        public ICommand ShowButtons
+        {
+            get
+            {
+                if (this.showButtons == null)
+                {
+                    this.showButtons = new DelegateCommand(this.ButtonsShow);
+                }
+                return this.showButtons;
+            }
+        }
+
+        private void IngredientsShow()
+        {
+            this.HideAll();
+            this.IngredientsVisible = true;
+        }
+
+        private void MethodShow()
+        {
+            this.HideAll();
+            this.MethodVisible = true;
+        }
+
+        private void ButtonsShow()
+        {
+            this.HideAll();
+            this.ButtonsVisible = true;
+        }
+
+        private void HideAll()
+        {
+            this.MethodVisible = false;
+            this.IngredientsVisible = false;
+            this.ButtonsVisible = false;
         }
 
         public RecipeViewModel()

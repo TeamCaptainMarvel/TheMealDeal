@@ -4,10 +4,11 @@
     using Windows.UI.Xaml;
     using Windows.UI.Xaml.Controls;
     using TheMealDeal.Pages;
-    using Windows.UI.Xaml.Media;
+    using Windows.UI.Xaml.Navigation;
 
     public sealed partial class MainPage : Page
     {
+        
         private string path;
 
         SQLite.Net.SQLiteConnection connection;
@@ -17,6 +18,10 @@
             this.InitializeComponent();
             this.path = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "db.sqlite");
             this.connection = new SQLite.Net.SQLiteConnection(new SQLite.Net.Platform.WinRT.SQLitePlatformWinRT(), path);
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
         }
 
         private void BrowseButton_Click(object sender, RoutedEventArgs e)
